@@ -1,0 +1,26 @@
+<div class="container mt-4">
+  @if (cargando) {
+    <p>Cargando...</p>
+  }
+
+  @if (error) {
+    <p class="text-danger">{{ error }}</p>
+  }
+
+  @if (estudiante) {
+    <div class="card" style="max-width: 500px;">
+      <div class="card-body">
+        <h3 class="card-title">{{ estudiante.nombre }}</h3>
+        <p><strong>Nota 1:</strong> {{ estudiante.nota1 }}</p>
+        <p><strong>Nota 2:</strong> {{ estudiante.nota2 }}</p>
+        <p><strong>Nota 3:</strong> {{ estudiante.nota3 }}</p>
+        <p><strong>Suma:</strong> {{ suma }}</p>
+        <p><strong>Promedio:</strong> {{ promedio.toFixed(2) }}</p>
+        <p><strong>Estado académico:</strong> {{ estado }}</p>
+        <p><strong>Observación:</strong> {{ observacion }}</p>
+      </div>
+    </div>
+  }
+
+  <a routerLink="/" class="btn btn-secondary mt-3">Volver</a>
+</div>
